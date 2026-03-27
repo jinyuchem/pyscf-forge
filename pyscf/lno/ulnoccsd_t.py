@@ -20,10 +20,7 @@
 ULNO-UCCSD(T)
 '''
 
-
 import ctypes
-import os
-
 import numpy
 
 from pyscf import lib

@@ -36,6 +36,12 @@ CCulnoccsd_t_zbaa = libcc.CCulnoccsd_t_zbaa
 
 
 def kernel(mycc, eris, prjlo, t1=None, t2=None, verbose=logger.NOTE):
+    '''
+    adapted from pyscf.cc.uccsd_t
+
+    Args:
+       prjlo[mu,i] = <mu|i> is the overlap between the mu-th LO and the i-th occ MO.
+    '''
     cpu1 = cpu0 = (logger.process_clock(), logger.perf_counter())
     log = logger.new_logger(mycc, verbose)
     if t1 is None: t1 = mycc.t1

@@ -374,7 +374,7 @@ def impurity_solve(mcc, mo_coeff, uocc_loc, mo_occ, maskact, eris,
         cput1 = log.timer_debug1('imp sol - cc  ene', *cput1)
         if ccsd_t:
             from pyscf.lno.ulnoccsd_t import kernel as UCCSD_T
-            elcorr_cc_t = UCCSD_T(mcc, imp_eris, prjlo, t1=t1, t2=t2)
+            elcorr_cc_t = UCCSD_T(mcc, imp_eris, prjlo, t1=t1, t2=t2, verbose=verbose_imp)
             cput1 = log.timer_debug1('imp sol - cc  (T)', *cput1)
         else:
             elcorr_cc_t = 0.
